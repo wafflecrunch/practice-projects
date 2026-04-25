@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test File</title>
+</head>
+<body>
+    <div id="parentDiv"></div>
+</body>
+    <script>
+        let state = {
+            count : 0
+        }
+
+        function onButtonPress(){
+            state.count +=1;
+            buttonrerenderComp()
+        }
+
+        function buttonrerenderComp(){
+            document.getElementById("parentDiv").innerHTML = ''
+            const buttonComp = buttonComponent(state.count);
+            document.getElementById('parentDiv').appendChild(buttonComp);
+        }
+
+        function buttonComponent(count){
+            const comp = document.createElement('button');
+            comp.setAttribute('onclick', 'onButtonPress()');
+            comp.innerHTML = `Counter ${++count}`;
+            return comp;
+        }
+
+        buttonrerenderComp()
+    </script>
+</html>
