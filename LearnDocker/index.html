@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+    <title>Test Docs</title>
+</head>
+<body>
+    <button id="testBtn">Click here</button>
+</body>
+<script src="script.js" type="module">
+    // const myProm = new Promise((res, rej)=>{
+    //     const timer = setTimeout(()=>{
+    //         rej("Timeout, user didn't click in 5 secs")
+    //     }, 3000)
+
+    //     document.getElementById("testBtn").addEventListener("click",()=>{
+    //         clearTimeout(timer)
+    //         res("ESCOBAR!");
+    //     }, )
+    // })
+    
+    // myProm
+    // .then((value)=>console.log("Button clicked", value))
+    // .catch((error)=>{
+    //     console.error("Error", error);
+
+// })
+
+
+    async function myFn(){
+        await { then() {}}
+    }
+
+    const fn = await myFn()
+
+    console.info(fn)
+
+
+        
+</script>
+</html>
